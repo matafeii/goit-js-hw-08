@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
 }
 
-/* гальорка*/
+/* Gallery */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +53,48 @@ body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* модалка by kit_kat*/
+/* Desktop First - 1140px */
+@media (max-width: 1140px) {
+  .gallery {
+    gap: 20px;
+  }
+
+  .gallery-item {
+    flex-basis: calc((100% - 40px) / 3);
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .gallery {
+    gap: 16px;
+  }
+
+  .gallery-item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+
+  .gallery-image {
+    height: 180px;
+  }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+  .gallery {
+    gap: 12px;
+  }
+
+  .gallery-item {
+    flex-basis: 100%;
+  }
+
+  .gallery-image {
+    height: 160px;
+  }
+}
+
+/* Modal */
 .basicLightbox {
   background: rgba(0, 0, 0, 0.8);
 }
